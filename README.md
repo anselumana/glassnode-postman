@@ -1,4 +1,4 @@
-# Glassnode API Postman
+# Glassnode API - Postman collection
 
 **Glassnode API Postman collection.**
 
