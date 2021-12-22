@@ -11,7 +11,7 @@ I am in no way affiliated, associated, authorized, endorsed by, or in any way of
 
 This is a public repository hosting the Postman collection of the Glassnode API.
 
-## How to import the collection
+## How to import the collection into Postman
 
 Here are the simple steps to follow in order to import the collection in Postman.
 
@@ -34,3 +34,16 @@ For help on how to use the API key follow https://docs.glassnode.com/basic-api/a
 *Note: add the API key to the top level Glassnode API folder in order for it to be inherited by all requests.*
 
 And that's it, have fun!
+
+## How to generate the collection
+
+The JSON collection is generated automatically by the `./scripts/main.py` script.
+As the Glassnode API evolves and new metrics are added, you may find that the JSON collection in this repo is not updated.
+In this case, you can generate it yourself by following these steps:
+* create a python virtual environment, clone this repo and activate the env
+* run `python3 -m pip install requirements.txt` to install the dependencies
+* create a `.env` file with the following key-value pair: `API_KEY=<YOUR_GLASSNODE_API_KEY>`
+* finally, run `python3 ./scripts/main.py`
+
+This will generate the new JSON collection under the `./postman/` directory, replacing the old one.
+All you have to do now is (re)import it into Postman
