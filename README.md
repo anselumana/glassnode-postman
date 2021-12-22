@@ -46,4 +46,4 @@ In this case, you can generate it yourself by following these steps:
 * finally, run `python3 ./scripts/main.py`
 
 This will generate the new JSON collection under the `./postman/` directory, replacing the old one.
-All you have to do now is (re)import it into Postman
+All you have to do now is (re)import it into Postman.
