@@ -7,7 +7,7 @@ def get_template():
         "info": {
             "_postman_id": "9c236aa8-b6ff-4975-9c03-9f402044d0a6",
             "name": "Glassnode API",
-            "description": "Non-official Glassnode API Postman collection. API Docs: https://docs.glassnode.com/api",
+            "description": "Non-official Glassnode API Postman collection. API Docs: https://docs.glassnode.com/api. Github repository: https://github.com/anselumana/glassnode-postman. Issues: https://github.com/anselumana/glassnode-postman/issues",
             "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
         },
         "item": []
