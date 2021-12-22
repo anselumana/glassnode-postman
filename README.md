@@ -41,7 +41,7 @@ The JSON collection is generated automatically by the `./scripts/main.py` script
 As the Glassnode API evolves and new metrics are added, you may find that the JSON collection in this repo is not updated.
 In this case, you can generate it yourself by following these steps:
 * create a python virtual environment, clone this repo and activate the env
-* run `python3 -m pip install requirements.txt` to install the dependencies
+* run `python3 -m pip install -r requirements.txt` to install the dependencies
 * create a `.env` file with the following key-value pair: `API_KEY=<YOUR_GLASSNODE_API_KEY>`
 * finally, run `python3 ./scripts/main.py`
 
