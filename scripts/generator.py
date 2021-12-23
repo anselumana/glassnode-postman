@@ -25,15 +25,13 @@ class GlassnodePostmanGenerator():
     def __generate_collection(self, endpoints: dict) -> dict:
         "Returns the dict representing the Postman JSON collection"
         collection = utils.get_template()
-        # todo: sort domains
-        for domain in endpoints:
+        for domain in sorted(endpoints.keys()):
             folder_name = utils.beautify(domain)
             folder = utils.get_folder(folder_name)
-            for endpoint in endpoints[domain]:
+            for endpoint in sorted(endpoints[domain], key=lambda e: e["name"]):
                 request = utils.get_request(endpoint)
                 folder["item"].append(request)
             collection["item"].append(folder)
-        # todo: sort metrics
         return collection
         
     def __get_endpoints_grouped_by_domain(self, raw_endpoints: list) -> dict:
