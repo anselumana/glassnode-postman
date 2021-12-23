@@ -2,7 +2,7 @@ from dotenv import dotenv_values
 
 GLASSNODE_ENDPOINTS_URL = "https://api.glassnode.com/v2/metrics/endpoints"
 
-def get_template():
+def get_template() -> dict:
     return {
         "info": {
             "_postman_id": "9c236aa8-b6ff-4975-9c03-9f402044d0a6",
@@ -13,13 +13,13 @@ def get_template():
         "item": []
     }
 
-def get_folder(name):
+def get_folder(name) -> dict:
     return {
         "name": name,
         "item": []
     }
 
-def get_request(endpoint):
+def get_request(endpoint) -> dict:
     host = "{{url}}"
     return {
         "name": endpoint["name"],
@@ -81,8 +81,13 @@ def get_request(endpoint):
         },
         "response": []
     }
+    
+def beautify(value: str) -> str:
+    split = str.split(value, "_")
+    split = [x.capitalize() for x in split]
+    return " ".join(split)
 
-def get_api_key():
+def get_api_key() -> str:
     """
     Returns the Glassnode api key found in the .env file in the root directory.
     """
