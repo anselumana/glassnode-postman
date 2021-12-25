@@ -42,7 +42,7 @@ As the Glassnode API evolves and new metrics are added, you may find that the JS
 In this case, you can generate it yourself by following these steps:
 * create a python virtual environment, clone this repo and activate the env
 * run `python3 -m pip install -r requirements.txt` to install the dependencies
-* create a `.env` file with the following key-value pair: `API_KEY=<YOUR_GLASSNODE_API_KEY>`
+* create a `.env` file in the root directory with the following key-value pair: `API_KEY=<YOUR_GLASSNODE_API_KEY>`
 * finally, run `python3 ./scripts/generator.py > ./postman/glassnode-api.postman_collection.json`
 
 This will generate the new JSON collection under the `./postman/` directory, replacing the old one.
